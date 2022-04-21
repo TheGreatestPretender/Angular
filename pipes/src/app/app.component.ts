@@ -10,7 +10,7 @@ export class AppComponent {
   date!: string;
   amount!: number;
   height!: number;
-  miles !: number;
+  miles!: number;
 
   car = {
     make: 'Honda',

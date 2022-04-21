@@ -83,13 +83,12 @@
       <label>
         <b>Kilometers</b>
       </label>
-
-      <div>
-        {{ miles | number }}
+      <div *ngIf="(miles | convert: 'km') > 10">
+        {{ miles | convert: 'km' }}
       </div>
     </div>
   </div>
 
-  <!-- useful for debugging -->
-  {{ car | json }}
+  <!--  useful for debugging
+  {{ car | json }} -->
 </div>
