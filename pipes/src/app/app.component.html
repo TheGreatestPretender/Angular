@@ -1,0 +1,95 @@
+<div class="container">
+  <h3>Payment Form</h3>
+
+  <!-- Payee Name Row -->
+  <div class="row">
+    <div class="form-group col">
+      <label>Payee Name</label>
+      <input class="form-control" (input)="onNameChange($any($event.target).value)"/>
+    </div>
+
+    <div class="col">
+      <label>
+        <b>Receiver Name</b>
+      </label>
+
+      <div>
+        {{ name | titlecase }}
+      </div>
+    </div>
+  </div>
+
+  <!-- Payment Date Row -->
+  <div class="row">
+    <div class="form-group col">
+      <label>Payment Date</label>
+      <input type="date" class="form-control" (input)="onDateChange($any($event.target).value)"/>
+    </div>
+
+    <div class="col">
+      <label>
+        <b>Payment Date Recieved</b>
+      </label>
+
+      <div>
+        {{ date | date: 'MMMM d, y'}}
+      </div>
+    </div>
+  </div>
+
+  <!-- Amount Paid Row -->
+  <div class="row">
+    <div class="form-group col">
+      <label>Amount Paid</label>
+      <input class="form-control" (input)="onAmountChange($any($event.target).value)"/>
+    </div>
+
+    <div class="col">
+      <label>
+        <b>Amount Paid</b>
+      </label>
+
+      <div>
+        {{ amount | currency }}
+      </div>
+    </div>
+  </div>
+
+   <!-- Height Row -->
+   <div class="row">
+    <div class="form-group col">
+      <label>Height</label>
+      <input class="form-control" (input)="onHeightChange($any($event.target).value)"/>
+    </div>
+
+    <div class="col">
+      <label>
+        <b>Height</b>
+      </label>
+
+      <div>
+        {{ height | number }}
+      </div>
+    </div>
+
+    <!-- Miles Row -->
+   <div class="row">
+    <div class="form-group col">
+      <label>Miles</label>
+      <input class="form-control" (input)="onMilesChange($any($event.target).value)"/>
+    </div>
+
+    <div class="col">
+      <label>
+        <b>Kilometers</b>
+      </label>
+
+      <div>
+        {{ miles | number }}
+      </div>
+    </div>
+  </div>
+
+  <!-- useful for debugging -->
+  {{ car | json }}
+</div>
