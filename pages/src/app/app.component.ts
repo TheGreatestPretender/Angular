@@ -106,6 +106,8 @@ export class AppComponent {
   ]
   currentPage = 0;
 
-  //Event Handler
+  checkWindowIndex(idx: number) {
+    return Math.abs(this.currentPage - idx) < 5;
+  }
 
 }
