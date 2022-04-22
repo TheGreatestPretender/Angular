@@ -40,18 +40,9 @@
   </ul>
 </nav>
 
-<!-- <div>
+<div>
   <h4>
     {{ images[currentPage].title }}
   </h4>
   <img [src]="images[currentPage].url" [alt]="images[currentPage].title">
-</div> -->
-
-<div [ngSwitch]="currentPage">
-  <div *ngSwitchCase="0">
-    current page is 0
-  </div>
-  <div *ngSwitchDefault>
-    Unknown current page!
-  </div>
 </div>
